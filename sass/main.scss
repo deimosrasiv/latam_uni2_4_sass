@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+	background-image: linear-gradient(315deg, #d67d91 0%, #853aa4 20%);
+	min-height: 100vh;
+}
+//'Comforter Brush', cursive
+
+
+$font-family-base: 'Comforter Brush', cursive;
+
+h1,h2,h3,h4,h5 {
+    color: rgb(212, 72, 182);
+}
+
+$agatha: rgba(29, 117, 175, 0.986);
+$primary:   #0d6efd;
+$secondary: #6c757d;
+$success:   #198754;
+$info:      #0dcaf0;
+$warning:   #ffc107;
+$danger:    #dc3545;
+$light:     #f8f9fa;
+$dark:      #212529;
+
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "agatha":     $agatha
+);
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+.btn-agatha{
+    @extend .btn;
+    background: agatha;
+
+}
+.card-black{
+     border-radius: 10px;
+     max-width: 400px;
+     @extend .card;
+     background: black;
+}
+
+.text-p{
+    color: white;
+    font-size: 25px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+    display: block;
+    margin: 0px auto;
+    width: 60%;
+   }
+
+
+
+   img{
+    display: block;
+    margin: 0px auto;
+    width: 80%;
+   }
+
+@media screen and (min-width: 421px) {
+    .card-black{
+        background: $primary;
+    }
+      
+}
+
+@media screen and (min-width: 576px) {
+    .card-black{
+        background: $success;
+    } 
+}
+
+@media screen and (min-width: 768px) {
+    .card-black{
+        background: $agatha;
+    } 
+}
+
+@media screen and (min-width: 992px) {
+    .card-black{
+        background: $info;
+    } 
+}
+
+@media screen and (min-width: 1200px) {
+    .card-black{
+        background: $dark;
+    } 
+}
